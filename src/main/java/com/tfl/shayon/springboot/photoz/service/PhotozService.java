@@ -1,5 +1,6 @@
-package com.tfl.shayon.springboot.photoz;
+package com.tfl.shayon.springboot.photoz.service;
 
+import com.tfl.shayon.springboot.photoz.model.Photo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

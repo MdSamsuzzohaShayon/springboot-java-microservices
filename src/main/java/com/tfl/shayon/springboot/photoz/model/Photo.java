@@ -1,4 +1,4 @@
-package com.tfl.shayon.springboot.photoz;
+package com.tfl.shayon.springboot.photoz.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotEmpty;
