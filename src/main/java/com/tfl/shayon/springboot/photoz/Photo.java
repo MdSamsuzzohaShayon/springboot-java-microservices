@@ -1,8 +1,11 @@
 package com.tfl.shayon.springboot.photoz;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class Photo {
 
     private String id;
+    @NotEmpty
     private String fileName;
 
     public Photo(){
