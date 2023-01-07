@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload a file</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Upload a file</h1>
+    <form class="form" >
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label for="fileName">Image file</label>
+                <input type="file" name="fileName" id="fileName" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <button class="btn" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script>
+    const form = document.querySelector('.form');
+    const fileInput = document.getElementById("fileName");
+    const formData = new FormData();
+    form.addEventListener('submit', async (fe)=>{
+        fe.preventDefault();
+        if(fileInput.files[0]){
+            formData.set("data", fileInput.files[0]);
+            const config = {
+                method : "POST",
+                body: formData
+            };
+            const response = await fetch('http://localhost:8080/photoz', config);
+            const text = await response.text();
+            console.log(text);
+        }else{
+            alert("No file found");
+        }
+    });
+</script>
+</body>
+</html>

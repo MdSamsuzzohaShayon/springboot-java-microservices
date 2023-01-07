@@ -6,5 +6,6 @@
     - `/photoz/1` Get single photo `curl -X GET http://localhost:8080/photoz/1`
     - `/photoz/1` delete single photo `curl -X DELETE http://localhost:8080/photoz/1`
     - `/photoz` create a photo `curl -X POST http://localhost:8080/photoz -H 'Content-Type: application/json' -d '{"fileName": "file2.jpg"}'`
+    - `/photoz` upload a real photo __http://localhost:8080/upload.html__
     - 
    
