@@ -11,4 +11,7 @@
  - Database operations
     - __http://localhost:8080/h2-console__ Access database from here db url will be `jdbc:h2:~/Documents/springboot-photoz/data/springboot` 
     - Set no user name and password
+
+
+https://www.youtube.com/watch?v=lh1oQHXVSc0&list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c
    
