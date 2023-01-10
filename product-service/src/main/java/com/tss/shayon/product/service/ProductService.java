@@ -6,6 +6,7 @@ import com.tss.shayon.product.model.Product;
 import com.tss.shayon.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class ProductService {
+
 
     private final ProductRepository productRepository;
 
