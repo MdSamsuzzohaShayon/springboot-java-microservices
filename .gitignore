@@ -13,6 +13,11 @@ order-service/target
 order-service/HELP.md
 order-service/.gitignore
 order-service/.idea
+### Inventory service ###
+inventory-service/target
+inventory-service/HELP.md
+inventory-service/.gitignore
+inventory-service/.idea
 
 ### STS ###
 .apt_generated
