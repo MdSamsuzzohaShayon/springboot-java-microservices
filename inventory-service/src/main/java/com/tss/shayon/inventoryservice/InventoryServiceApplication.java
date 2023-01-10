@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Random;
+
 @SpringBootApplication
 public class InventoryServiceApplication {
 
@@ -19,12 +21,15 @@ public class InventoryServiceApplication {
 	@Bean
 	public CommandLineRunner loadData(InventoryRepository inventoryRepository){
 		return args -> {
+			Random random = new Random();
 			Inventory inventory = new Inventory();
-			inventory.setSkuCode("IS-PN-13");
+			String uniqueInventorySku = String.format("%04d", random.nextInt(10000));
+			inventory.setSkuCode("IS-PN-13-" + uniqueInventorySku );
 			inventory.setQuantity(100);
 
 			Inventory inventory1 = new Inventory();
-			inventory1.setSkuCode("IS-PN-14");
+			String uniqueInventorySku1 = String.format("%04d", random.nextInt(10000));
+			inventory1.setSkuCode("IS-PN-14-"+uniqueInventorySku1);
 			inventory1.setQuantity(0);
 
 			inventoryRepository.save(inventory);
