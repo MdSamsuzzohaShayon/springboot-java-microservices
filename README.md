@@ -27,8 +27,12 @@
 ### Order service
 - Api endpoints
     - `/api/order` create an order `curl -X POST http://localhost:8081/api/order -H 'Content-Type: application/json' -d '{"orderLineItemsDtoList": [{"skuCode": "ph-ap-21", "price": 1200, "quantity": 1}]}'`
-
+    
 ### Product service
 - API end points
     - `/api/product` Create a product `curl -X POST http://localhost:8080/api/product -H 'Content-Type: application/json' -d '{"name": "Iphone 5", "description": "An old version of Iphone", "price": 600}'`
     - `/api/product` Get list of product `curl -X GET http://localhost:8080/api/product`
+
+### Inventory service
+ - API endpoints
+    - `/api/inventory` Get lists of inventory `curl -X GET http://localhost:8082/api/inventory?skuCode=qw-ds-2352&skuCode=qw-ds-2351&skuCode=qw-ds-2551`
