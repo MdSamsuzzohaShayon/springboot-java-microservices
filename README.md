@@ -36,3 +36,7 @@
 ### Inventory service
  - API endpoints
     - `/api/inventory` Get lists of inventory `curl -X GET http://localhost:8082/api/inventory?skuCode=qw-ds-2352&skuCode=qw-ds-2351&skuCode=qw-ds-2551`
+
+### Discovery service
+ - Eureka  service __http://localhost:8761/__
+ - 
