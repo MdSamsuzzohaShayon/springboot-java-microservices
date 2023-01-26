@@ -1,5 +1,5 @@
 # Springbott microservices
- - [tutorial playlist](https://www.youtube.com/watch?v=lh1oQHXVSc0&list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c), [docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index-files/index-1.html)
+ - [tutorial playlist](https://www.youtube.com/watch?v=9XI8lknaJzM&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=2), [docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index-files/index-1.html)
 - [Spring Framework Packages](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index.html)
 - [Support package for annotation-driven bean configuration](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/package-summary.html)
 - [Advantages](https://www.youtube.com/watch?v=T2rBkbT50TE&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j)
