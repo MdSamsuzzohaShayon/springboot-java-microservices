@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/*
+ * ===========================================================
+ * DATABASE MODEL FOR SQL DATABASE
+ * */
 @Entity
 @Table(name= "t_inventory")
 @Getter

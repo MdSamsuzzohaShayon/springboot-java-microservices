@@ -11,6 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+/*
+ * ===========================================================
+ * SERVICES ARE RESPONSIBLE FOR CREATING FUNCTIONS AND DATABASE OPERATION
+ * */
 @Service
 @RequiredArgsConstructor
 @Slf4j

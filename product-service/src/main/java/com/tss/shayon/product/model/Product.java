@@ -9,6 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 
+/*
+* ===========================================================
+* DATABASE MODEL FOR MONGODB
+* */
 @Document(value = "product") // Mongodb document
 @AllArgsConstructor
 @NoArgsConstructor

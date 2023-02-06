@@ -8,6 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/*
+ * ===========================================================
+ * SERVICES ARE RESPONSIBLE FOR CREATING FUNCTIONS AND DATABASE OPERATION
+ * */
 @Service
 @RequiredArgsConstructor
 public class InventoryService {

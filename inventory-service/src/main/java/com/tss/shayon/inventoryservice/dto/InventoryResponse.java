@@ -5,6 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/*
+ * ===========================================================
+ * FORMAT TO RESPONSE TO CLIENT
+ * */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

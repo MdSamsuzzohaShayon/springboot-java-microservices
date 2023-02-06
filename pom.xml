@@ -3,16 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!--
+    ================================================================================
+    PARENT OF THE PROJECT
+    -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.0.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <!--
+    ================================================================================
+    GROUP ID / PACKAGES / VERSION AND MORE
+    -->
     <groupId>com.tss.shayon</groupId>
     <artifactId>microservices-new</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <!--
+    ================================================================================
+    ALL CREATED SUB MODULE
+    -->
     <modules>
         <module>product-service</module>
         <module>order-service</module>
@@ -20,6 +35,10 @@
         <module>discovery-service</module>
     </modules>
 
+    <!--
+    ================================================================================
+    ALL THE PROPERTIES WILL BE HERE WITH VERSION
+    -->
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
@@ -27,6 +46,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!--
+    ================================================================================
+    SPRING BOOT DEPENDENCIES
+    -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -46,6 +69,10 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--
+    ================================================================================
+    SPRING BOOT PLUGIN
+    -->
     <build>
         <plugins>
             <plugin>

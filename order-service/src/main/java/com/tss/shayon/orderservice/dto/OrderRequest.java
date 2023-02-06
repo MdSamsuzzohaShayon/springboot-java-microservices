@@ -6,6 +6,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/*
+ * ===========================================================
+ * REQUEST FORMAT FROM CLIENT
+ * */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

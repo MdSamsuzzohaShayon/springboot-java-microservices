@@ -8,6 +8,10 @@ import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
 
+/*
+ * ===========================================================
+ * FORMAT TO RESPONSE TO CLIENT
+ * */
 @Data
 @Builder
 @AllArgsConstructor

@@ -9,6 +9,10 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.List;
 
+/*
+ * ===========================================================
+ * DATABASE MODEL FOR SQL DATABASE
+ * */
 @Entity
 @Table(name = "t_order_line_items")
 @Getter

@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+/*
+ * ===========================================================
+ * REQUEST FORMAT FROM CLIENT
+ * */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

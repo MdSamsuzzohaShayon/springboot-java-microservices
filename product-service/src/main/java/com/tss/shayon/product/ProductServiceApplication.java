@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
+
+/*
+ * ===========================================================
+ * RUNNING MAIN SPRING BOOT SERVER FROM HERE
+ * */
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ProductServiceApplication {

@@ -16,6 +16,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
+/*
+ * ===========================================================
+ * SERVICES ARE RESPONSIBLE FOR CREATING FUNCTIONS AND DATABASE OPERATION
+ * */
 @Service
 @RequiredArgsConstructor
 @Transactional

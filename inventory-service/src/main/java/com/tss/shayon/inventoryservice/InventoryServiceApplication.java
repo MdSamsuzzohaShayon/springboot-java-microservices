@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Random;
 
+/*
+ * ===========================================================
+ * RUNNING MAIN SPRING BOOT SERVER FROM HERE
+ * */
 //Registering with Eureka - https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/#registering-with-eureka
 @SpringBootApplication
 @EnableDiscoveryClient

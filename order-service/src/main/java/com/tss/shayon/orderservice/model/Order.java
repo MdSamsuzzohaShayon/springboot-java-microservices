@@ -5,6 +5,10 @@ import lombok.*;
 
 import java.util.List;
 
+/*
+ * ===========================================================
+ * DATABASE MODEL FOR SQL DATABASE
+ * */
 @Entity
 @Table(name = "t_orders")
 @Getter
