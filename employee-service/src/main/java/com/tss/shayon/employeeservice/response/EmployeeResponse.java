@@ -1,26 +1,11 @@
-package com.tss.shayon.employeeservice.entity;
+package com.tss.shayon.employeeservice.response;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
 
-/**
- * MAKE SOME DATABASE CALL USING THIS ENTITY
- */
-//This guide walks you through the process of building an application that uses Spring Data JPA to store and retrieve data in a relational database.
-@Entity
-@Table(name= "Employee")
-public class EmployeeEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+public class EmployeeResponse {
     private int id;
-
-    @Column(name="name")
     private String name;
-
-    @Column(name="email")
     private String email;
-
-    @Column(name="bloodgroup")
     private String bloodgroup;
 
     public int getId() {
@@ -54,6 +39,4 @@ public class EmployeeEntity {
     public void setBloodgroup(String bloodgroup) {
         this.bloodgroup = bloodgroup;
     }
-
-
 }
