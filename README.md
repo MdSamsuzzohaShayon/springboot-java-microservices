@@ -77,3 +77,9 @@
  - Get a employee `/employees/1` with `curl http://localhost:8080/employees/1`
  - Get address of an employee `/address/1` with `curl http://localhost:8080/address/1`
     
+
+### Microservice communication
+ - here are several ways to communicate
+    1. [WebClient:](Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.) Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty. [reactive web client introduced in Spring 5](https://www.baeldung.com/spring-5-webclient). Simply put, WebClient is an interface representing the main entry point for performing web requests. It was created as part of the Spring Web Reactive module and will be replacing the classic RestTemplate in these scenarios. In addition, the new client is a reactive, non-blocking solution that works over the HTTP/1.1 protocol.
+    2. [Rest Template: ](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others. RestTemplate offers templates for common scenarios by HTTP method, in addition to the generalized exchange and execute methods that support less frequent cases. Rest Template is used to create applications that consume RESTful Web Services. You can use the exchange() method to consume the [web services for all HTTP methods](https://www.tutorialspoint.com/spring_boot/spring_boot_rest_template.htm). 
+
