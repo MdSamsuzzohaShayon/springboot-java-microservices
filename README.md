@@ -1,48 +1,50 @@
-# Springbott microservices
- - [tutorial playlist](https://www.youtube.com/watch?v=9XI8lknaJzM&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=2), [docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index-files/index-1.html)
-- [Spring Framework Packages](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index.html)
-- [Support package for annotation-driven bean configuration](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/package-summary.html)
-- [Advantages](https://www.youtube.com/watch?v=T2rBkbT50TE&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j)
-  1. Each service deployable independently
-  2. Each app can be tested differently
-  3. Core changes on one app / service does not need the entire application testing
-  4. Dev working on one service, should not require
-  5. Spring cloud ready made support
+ # Springboot Microservices
+ - [Tutorial playlist](https://www.youtube.com/watch?v=9XI8lknaJzM&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=2)
+ - [Documentation Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html#documentation.first-steps)
+ - [Getting help](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-help.html#getting-help)
+ - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
+ - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/)
+ - Getting [Started Guides](https://spring.io/guides)
+ - Starting with [Spring Initializr](https://start.spring.io/)
+ - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
+ - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
+ - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
 
-- **Tests**
-- Add those dependencies in `pon.xml` file
-- [Adding Testcontainers JUnit 5 support to your project dependencies](https://www.testcontainers.org/test_framework_integration/junit_5/)
-- [Adding this module to your project dependencies](https://www.testcontainers.org/modules/databases/mongodb/)
-- [Managing versions for multiple Testcontainers dependencies
-  (do not remove version from here)](https://www.testcontainers.org/)
+### Properties
+ - Spring Boot Framework comes with a built-in mechanism for [application configuration](https://www.javatpoint.com/spring-boot-properties) using a file called application.properties. It is located inside the src/main/resources folder.
+ - [Various properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) can be specified inside your application.properties file, inside your application.yml file, or as command line switches. This appendix provides a list of common Spring Boot properties and references to the underlying classes that consume them.
+ - Property contributions can come from additional jar files on your classpath, so you should not consider this an exhaustive list. Also, you can define your own properties.
 
-## Errors that need to solve
-- [UnsatisfiedDependencyException: Error creating bean with name](https://stackoverflow.com/questions/57801875/unsatisfieddependencyexception-error-creating-bean-with-name-repository-bookre)
-    - The thing is, that your main and test packages differ: BookRepository is in app.entity.repository and your test is in repository. Try by aligning it and move your test to src/test/java/app/entity/repository.
+### Beans
+ - All of your application components (@Component, @Service, @Repository, @Controller, and others) are automatically registered as [Spring Beans](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.spring-beans-and-dependency-injection).
+ - If a bean has more than one constructor, you will need to mark the one you want Spring to use with @Autowired
 
-### Project setup (Cambine product-service, order-service, and inventory-service)
- -  create a maven project, inside maven project create 3 module: 
-     1) product-service: Copy dependencies 
-     1) inventory-service: Copy dependencies 
-     3) order-service: Copy dependencies and 
- - delete src folder from root project
- - Replace src folders of inventory-service, order-service, and product-service from our main previous projects
- - run maven command from maven tab `mvn clean verify`
- - If everything works successfully try running all maven module individually
 
-### Order service
-- Api endpoints
-    - `/api/order` create an order `curl -X POST http://localhost:8081/api/order -H 'Content-Type: application/json' -d '{"orderLineItemsDtoList": [{"skuCode": "ph-ap-21", "price": 1200, "quantity": 1}]}'`
-    
-### Product service
-- API end points
-    - `/api/product` Create a product `curl -X POST http://localhost:8080/api/product -H 'Content-Type: application/json' -d '{"name": "Iphone 5", "description": "An old version of Iphone", "price": 600}'`
-    - `/api/product` Get list of product `curl -X GET http://localhost:8080/api/product`
-
-### Inventory service
- - API endpoints
-    - `/api/inventory` Get lists of inventory `curl -X GET http://localhost:8082/api/inventory?skuCode=qw-ds-2352&skuCode=qw-ds-2351&skuCode=qw-ds-2551`
-
-### Discovery service
- - Eureka  service __http://localhost:8761/__
+### Dependencies
+ - **Spring Web** WEB  Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+ - **Spring Boot DevTools** DEVELOPER TOOLS Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
+ - **MySQL Driver** SQL  MySQL JDBC driver. 
+ - **Spring Data JPA** SQL Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate. Using this dependency a database connection from application.properties will be established
  - 
+
+### Annotations
+ - [Annotations for binding requests to controllers and handler methods as well as for binding request parameters to method arguments.](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/package-summary.html)
+ - [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations)
+
+
+### Database
+ - Create database `CREATE DATABASE employee_service;`
+ - Create employee table manually
+   ```
+   CREATE TABLE employee(
+        id INT NOT NULL AUTO_INCREMENT,
+        name VARCHAR(45) NULL,
+        email VARCHAR(45) NULL,
+        bloodroup VARCHAR(45) NULL,
+        PRIMARY KEY(ID)
+   );
+   ```
+
+### API Endpoints
+ - Get a employee `/employees/1` with `curl http://localhost:8080/employees/1`
+    

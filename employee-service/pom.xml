@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.1</version>
+		<version>3.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tss.shayon</groupId>
 	<artifactId>employee-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>employee-service</name>
-	<description>Employee service</description>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>
