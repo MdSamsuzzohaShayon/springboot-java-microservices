@@ -8,11 +8,11 @@ employee-service/target
 employee-service/HELP.md
 employee-service/.gitignore
 employee-service/.idea
-### Product service ###
-product-service/target
-product-service/HELP.md
-product-service/.gitignore
-product-service/.idea
+### Address service ###
+address-service/target
+address-service/HELP.md
+address-service/.gitignore
+address-service/.idea
 ### Order service ###
 order-service/target
 order-service/HELP.md

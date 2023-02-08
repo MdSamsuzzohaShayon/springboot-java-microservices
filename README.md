@@ -5,10 +5,16 @@
  - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
  - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/)
  - Getting [Started Guides](https://spring.io/guides)
+ - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
  - Starting with [Spring Initializr](https://start.spring.io/)
+ - [Maven Respository](https://mvnrepository.com)
  - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
  - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
+
+### Explanation
+ - Spring is one of the most popular [Java EE frameworks](https://www.geeksforgeeks.org/spring-service-annotation-with-example/). It is an open-source lightweight framework that allows Java EE 7 developers to build simple, reliable, and scalable enterprise applications. This framework mainly focuses on providing various ways to help you manage your business objects. It made the development of Web applications much easier than compared to classic Java frameworks and application programming interfaces (APIs), such as Java database connectivity (JDBC), JavaServer Pages(JSP), and Java Servlet. This framework uses various new techniques such as Aspect-Oriented Programming (AOP), Plain Old Java Object (POJO), and dependency injection (DI), to develop enterprise applications. Now talking about Spring Annotation.
+ - Spring Annotations are a form of metadata that provides data about a program. Annotations are used to provide supplemental information about a program. It does not have a direct effect on the operation of the code they annotate. It does not change the action of the compiled program. 
 
 ### Properties
  - Spring Boot Framework comes with a built-in mechanism for [application configuration](https://www.javatpoint.com/spring-boot-properties) using a file called application.properties. It is located inside the src/main/resources folder.
@@ -44,7 +50,30 @@
         PRIMARY KEY(ID)
    );
    ```
+ - Insert a record to employee
+    ```
+    INSERT INTO employee(name, email, bloodgroup) VALUES ("Kilyan Mbappe", "mbappe@gmail.com", "O+");
+    ```
+ - Create address table inside same database where employee table belong and make one to many relationship with employee
+    ```
+    CREATE TABLE address(
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        fk_employee_id INT(11),
+        lane1 VARCHAR(45),
+        lane2 VARCHAR(45),
+        zip VARCHAR(45),
+        state VARCHAR(45),
+        PRIMARY KEY (id),
+        FOREIGN KEY(fk_employee_id) REFERENCES employee(id) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+    ```
+ - Insert a record to address 
+    ```
+    INSERT INTO address(fk_employee_id, lane1, lane2, zip, state) VALUES (1, "l1", "l2", "1234", "Raj");
+    ```
+
 
 ### API Endpoints
  - Get a employee `/employees/1` with `curl http://localhost:8080/employees/1`
+ - Get address of an employee `/address/1` with `curl http://localhost:8080/address/1`
     
