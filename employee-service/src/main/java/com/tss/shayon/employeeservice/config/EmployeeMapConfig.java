@@ -14,8 +14,10 @@ public class EmployeeMapConfig {
         return new ModelMapper();
     }
     
+    /*
     @Bean
     public RestTemplate restTemplate() {
     	return new RestTemplate();
     }
+    */
 }
