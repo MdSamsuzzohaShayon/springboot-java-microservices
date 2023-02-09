@@ -2,10 +2,12 @@ package com.tss.shayon.employeeservice.service;
 
 import com.tss.shayon.employeeservice.entity.EmployeeEntity;
 import com.tss.shayon.employeeservice.repo.EmployeeRepository;
+import com.tss.shayon.employeeservice.response.AddressResponse;
 import com.tss.shayon.employeeservice.response.EmployeeResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class EmployeeService {
@@ -16,8 +18,12 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private RestTemplate restTemplate;
 
     public EmployeeResponse getEmployeeEntity(int id) {
+    	
+    	
         EmployeeEntity employeeEntity = employeeRepository.findById(id).get();
         // Return employee response
 
@@ -30,8 +36,13 @@ public class EmployeeService {
         employeeResponse.setBloodgroup(employeeEntity.getBloodgroup());
          */
 
+        
         // Use model mapper instead
         EmployeeResponse employeeResponse = modelMapper.map(employeeEntity, EmployeeResponse.class);
+        // Set data to address response by making a rest api call
+        // curl http://localhost:8081/address-app/api/address/1
+        AddressResponse addressResponse = restTemplate.getForObject("http://localhost:8081/address-app/api/address/{id}", AddressResponse.class , id);
+        employeeResponse.setAddressResponse(addressResponse);
         return employeeResponse;
     }
 
