@@ -3,10 +3,10 @@
  - [Documentation Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html#documentation.first-steps)
  - [Getting help](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-help.html#getting-help)
  - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
- - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/)
- - Getting [Started Guides](https://spring.io/guides)
+ - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/), Create [restful api](https://spring.io/guides/gs/rest-service/) with springboot
+ - Getting [Started Guides](https://spring.io/guides), [Create project with visual studio code](https://spring.io/guides/gs/guides-with-vscode/), [Using intellij idea](https://spring.io/guides/gs/intellij-idea/)
  - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
- - Starting with [Spring Initializr](https://start.spring.io/)
+ - Starting with [Spring Initializr](https://start.spring.io/), another way is to [clone initial project from github](https://github.com/spring-guides/getting-started-guides#reveal-maven)
  - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
  - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
@@ -16,6 +16,7 @@
  - Spring Annotations are a form of metadata that provides data about a program. Annotations are used to provide supplemental information about a program. It does not have a direct effect on the operation of the code they annotate. It does not change the action of the compiled program. 
 
 ### Maven
+ - [Building Java Projects with Maven](https://spring.io/guides/gs/maven/)
  - [Maven Respository](https://mvnrepository.com)
  - Running project via terminal `./mvnw spring-boot:run` alternativly if maven is installed locally `mvn spring-boot:run`
 
@@ -85,7 +86,7 @@
  - here are several ways to communicate
     1. [WebClient:](Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.) Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty. [reactive web client introduced in Spring 5](https://www.baeldung.com/spring-5-webclient). Simply put, WebClient is an interface representing the main entry point for performing web requests. It was created as part of the Spring Web Reactive module and will be replacing the classic RestTemplate in these scenarios. In addition, the new client is a reactive, non-blocking solution that works over the HTTP/1.1 protocol.
     2. [Rest Template: ](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others. RestTemplate offers templates for common scenarios by HTTP method, in addition to the generalized exchange and execute methods that support less frequent cases. Rest Template is used to create applications that consume RESTful Web Services. You can use the exchange() method to consume the [web services for all HTTP methods](https://www.tutorialspoint.com/spring_boot/spring_boot_rest_template.htm). 
-    3. 
+    3. OpenFeign (*Recommended*)
  - Scaling application - when we will get enourmus amount of incoming requests, it will be diffucult to handle all the requests at once, as a solution to this run same server multiple times with [load balancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/), therefore, requests of clients will be distributed to different server. 
  - [Load balancing](https://www.baeldung.com/spring-cloud-load-balancer) is the process of distributing traffic among different instances of the same application.
  - In order to create load balancer we need dynamic ports. Running a service multiple time with [dynamic port](https://www.youtube.com/watch?v=a2EZxkwMrjU&t=1635s). instead of defining a fixed port, [we can let the Spring Boot application run on a random](https://www.baeldung.com/spring-boot-running-port) port by setting “0” as the value of the “server.port” property. 
