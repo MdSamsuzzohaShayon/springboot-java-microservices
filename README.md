@@ -1,6 +1,6 @@
 # Maven
  - [Tutorial](https://www.youtube.com/watch?v=Xatr8AZLOsE), [Guides](https://maven.apache.org/guides/),
- - Install maven on linux `sudo apt install maven` anc check version `mvn --version`
+ - Install maven on linux `sudo apt install maven` anc check version `mvn --version` - this may install open jdk as well
  - [The Maven Wrapper](https://maven.apache.org/wrapper/) is an easy way to ensure a user of your Maven build has everything necessary to run your Maven build.
  - If there is not maven wrapper we should install by ourself `mvn wrapper:wrapper` and check version with maven wrapper `./mvnw --version` 
  - [Introduction to the Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
@@ -9,7 +9,17 @@
 
 ### POM
 - A Project Object Model or [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=Available%20Variables-,What%20is%20a%20POM%3F,default%20values%20for%20most%20projects.) is the fundamental unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project.
-- [Pom reference](https://maven.apache.org/pom.html)
+  - [Pom reference](https://maven.apache.org/pom.html), [Minimal POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#minimal-pom)
+    ```
+    <project xmlns="http://maven.apache.org/POM/4.0.0">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.mycompany.app</groupId>
+        <artifactId>my-app</artifactId>
+        <version>1</version>
+    </project>
+    ```
+- A POM requires that its groupId, artifactId, and version be configured. These three values form the project's fully qualified artifact name. This is in the form of <groupId>:<artifactId>:<version>. As for the example above, its fully qualified artifact name is “com.mycompany.app:my-app:1”.
+- Also, as mentioned in the first section, if the configuration details are not specified, Maven will use their defaults. One of these default values is the packaging type. Every Maven project has a packaging type. If it is not specified in the POM, then the default value “jar” would be used. 
 - [Dependency management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) is a core feature of Maven. [Managing dependencies](https://maven.apache.org/pom.html#dependencies) for a single project is easy. Managing dependencies for multi-module projects and applications that consist of hundreds of modules is possible.
 - Find all maven [dependency or repository](https://mvnrepository.com/), use [sonatype maven search](https://search.maven.org/), or google search, or on intellij idea -> code -> generate -> dependency
 - This element refers to the classpath of the task at hand (compiling and runtime, testing, etc.) as well as how to limit the transitivity of a dependency. There are five scopes available:
