@@ -1,135 +1,28 @@
- # Springboot Microservices
- - [Tutorial playlist](https://www.youtube.com/watch?v=9XI8lknaJzM&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=2)
- - [Documentation Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html#documentation.first-steps)
- - [Getting help](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-help.html#getting-help)
- - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
- - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/), Create [restful api](https://spring.io/guides/gs/rest-service/) with springboot
- - Getting [Started Guides](https://spring.io/guides), [Create project with visual studio code](https://spring.io/guides/gs/guides-with-vscode/), [Using intellij idea](https://spring.io/guides/gs/intellij-idea/)
- - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
- - Starting with [Spring Initializr](https://start.spring.io/), another way is to [clone initial project from github](https://github.com/spring-guides/getting-started-guides#reveal-maven)
- - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
- - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
- - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
+# Maven
+ - [Tutorial](https://www.youtube.com/watch?v=Xatr8AZLOsE), [Guides](https://maven.apache.org/guides/),
+ - Install maven on linux `sudo apt install maven` anc check version `mvn --version`
+ - [The Maven Wrapper](https://maven.apache.org/wrapper/) is an easy way to ensure a user of your Maven build has everything necessary to run your Maven build.
+ - If there is not maven wrapper we should install by ourself `mvn wrapper:wrapper` and check version with maven wrapper `./mvnw --version` 
+ - [Introduction to the Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+ - validate the project is correct and all necessary information is available `./mvnw validate`
+ - Guide to Working with [Multiple Modules](https://maven.apache.org/guides/mini/guide-multiple-modules.html), [Multi-Module Project with Maven](https://www.baeldung.com/maven-multi-module)
 
-### Explanation
- - Spring is one of the most popular [Java EE frameworks](https://www.geeksforgeeks.org/spring-service-annotation-with-example/). It is an open-source lightweight framework that allows Java EE 7 developers to build simple, reliable, and scalable enterprise applications. This framework mainly focuses on providing various ways to help you manage your business objects. It made the development of Web applications much easier than compared to classic Java frameworks and application programming interfaces (APIs), such as Java database connectivity (JDBC), JavaServer Pages(JSP), and Java Servlet. This framework uses various new techniques such as Aspect-Oriented Programming (AOP), Plain Old Java Object (POJO), and dependency injection (DI), to develop enterprise applications. Now talking about Spring Annotation.
- - Spring Annotations are a form of metadata that provides data about a program. Annotations are used to provide supplemental information about a program. It does not have a direct effect on the operation of the code they annotate. It does not change the action of the compiled program. 
+### POM
+- A Project Object Model or [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=Available%20Variables-,What%20is%20a%20POM%3F,default%20values%20for%20most%20projects.) is the fundamental unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project.
+- [Pom reference](https://maven.apache.org/pom.html)
+- [Dependency management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) is a core feature of Maven. [Managing dependencies](https://maven.apache.org/pom.html#dependencies) for a single project is easy. Managing dependencies for multi-module projects and applications that consist of hundreds of modules is possible.
+- Find all maven [dependency or repository](https://mvnrepository.com/), use [sonatype maven search](https://search.maven.org/), or google search, or on intellij idea -> code -> generate -> dependency
+- This element refers to the classpath of the task at hand (compiling and runtime, testing, etc.) as well as how to limit the transitivity of a dependency. There are five scopes available:
+- [Properties](https://maven.apache.org/pom.html#Properties) are the last required piece to understand POM basics. Maven properties are value placeholders, like properties in Ant. Their values are accessible anywhere within a POM by using the notation ${X}, where X is the property.
 
-### Maven
- - [Building Java Projects with Maven](https://spring.io/guides/gs/maven/)
- - [Maven Respository](https://mvnrepository.com)
- - Running project via terminal `./mvnw spring-boot:run` alternativly if maven is installed locally `mvn spring-boot:run`
+### Commands
+- `./mvnw clean` remove all files generated by the previous build
+- `./mvnw validate` validate the project is correct and all necessary information is available.
+- `./mvnw compile` 	compile the source code of the project.
+- `./mvnw test` run tests using a suitable unit testing framework. These tests should not require the code be packaged or deployed.
+- `./mvnw test-compile` compile the test source code into the test destination directory.
+- `./mvnw clean compile test package` packaging (A jar file can be founded inside target folder)
+- `./mvnw install` 	install the package into the local repository, for use as a dependency in other projects locally.
 
-### Properties
- - Spring Boot Framework comes with a built-in mechanism for [application configuration](https://www.javatpoint.com/spring-boot-properties) using a file called application.properties. It is located inside the src/main/resources folder.
- - [Various properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) can be specified inside your application.properties file, inside your application.yml file, or as command line switches. This appendix provides a list of common Spring Boot properties and references to the underlying classes that consume them.
- - Property contributions can come from additional jar files on your classpath, so you should not consider this an exhaustive list. Also, you can define your own properties.
-
-### Beans
- - All of your application components (@Component, @Service, @Repository, @Controller, and others) are automatically registered as [Spring Beans](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.spring-beans-and-dependency-injection).
- - If a bean has more than one constructor, you will need to mark the one you want Spring to use with @Autowired
-
-
-### Dependencies
- - **Spring Web** WEB  Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
- - **Spring Boot DevTools** DEVELOPER TOOLS Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
- - **MySQL Driver** SQL  MySQL JDBC driver. 
- - **Spring Data JPA** SQL Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate. Using this dependency a database connection from application.properties will be established
- - 
-
-### Annotations
- - [Annotations for binding requests to controllers and handler methods as well as for binding request parameters to method arguments.](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/package-summary.html)
- - [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations)
-
-
-### Database
- - Create database `CREATE DATABASE employee_service;`
- - Create employee table manually
-   ```
-   CREATE TABLE employee(
-        id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(45) NULL,
-        email VARCHAR(45) NULL,
-        bloodroup VARCHAR(45) NULL,
-        PRIMARY KEY(ID)
-   );
-   ```
- - Insert a record to employee
-    ```
-    INSERT INTO employee(name, email, bloodgroup) VALUES ("Kilyan Mbappe", "mbappe@gmail.com", "O+");
-    ```
- - Create address table inside same database where employee table belong and make one to many relationship with employee
-    ```
-    CREATE TABLE address(
-        id INT(11) NOT NULL AUTO_INCREMENT,
-        fk_employee_id INT(11),
-        lane1 VARCHAR(45),
-        lane2 VARCHAR(45),
-        zip VARCHAR(45),
-        state VARCHAR(45),
-        PRIMARY KEY (id),
-        FOREIGN KEY(fk_employee_id) REFERENCES employee(id) ON DELETE CASCADE ON UPDATE CASCADE
-    );
-    ```
- - Insert a record to address 
-    ```
-    INSERT INTO address(fk_employee_id, lane1, lane2, zip, state) VALUES (1, "l1", "l2", "1234", "Raj");
-    ```
-
-
-### API Endpoints
- - Get a employee `/employee-app/api/employees/1` with `curl http://localhost:8080/employee-app/api/employees/1`
- - Get address of an employee `/address-app/api/address/1` with `curl http://localhost:8081/address-app/api/address/1`
-    
-
-### Microservice communication
- - here are several ways to communicate
-    1. [WebClient:](Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.) Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty. [reactive web client introduced in Spring 5](https://www.baeldung.com/spring-5-webclient). Simply put, WebClient is an interface representing the main entry point for performing web requests. It was created as part of the Spring Web Reactive module and will be replacing the classic RestTemplate in these scenarios. In addition, the new client is a reactive, non-blocking solution that works over the HTTP/1.1 protocol.
-    2. [Rest Template: ](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others. RestTemplate offers templates for common scenarios by HTTP method, in addition to the generalized exchange and execute methods that support less frequent cases. Rest Template is used to create applications that consume RESTful Web Services. You can use the exchange() method to consume the [web services for all HTTP methods](https://www.tutorialspoint.com/spring_boot/spring_boot_rest_template.htm). 
-    3. OpenFeign (*Recommended*)
- - Scaling application - when we will get enourmus amount of incoming requests, it will be diffucult to handle all the requests at once, as a solution to this run same server multiple times with [load balancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/), therefore, requests of clients will be distributed to different server. 
- - [Load balancing](https://www.baeldung.com/spring-cloud-load-balancer) is the process of distributing traffic among different instances of the same application.
- - In order to create load balancer we need dynamic ports. Running a service multiple time with [dynamic port](https://www.youtube.com/watch?v=a2EZxkwMrjU&t=1635s). instead of defining a fixed port, [we can let the Spring Boot application run on a random](https://www.baeldung.com/spring-boot-running-port) port by setting “0” as the value of the “server.port” property. 
- - This part of the documentation covers support for [reactive-stack web applications](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html) built on a Reactive Streams API to run on non-blocking servers, such as Netty, Undertow, and Servlet containers. 
- - [Webflux dependency](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Resources
+ - [Specifying resource directories](https://maven.apache.org/plugins/maven-resources-plugin/examples/resource-directory.html) 
