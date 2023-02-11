@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -37,7 +38,9 @@ public class EmployeeService {
         // Use model mapper instead
         EmployeeResponse employeeResponse = modelMapper.map(employeeEntity, EmployeeResponse.class);
                 
-        AddressResponse addressResponse = addressClient.getAddressbyEmployeeId(id); 
+        // AddressResponse addressResponse = addressClient.getAddressbyEmployeeId(id).getBody();
+        ResponseEntity<AddressResponse> addressResponseEntity = addressClient.getAddressbyEmployeeId(id);
+        AddressResponse addressResponse = addressResponseEntity.getBody();
         
         employeeResponse.setAddressResponse(addressResponse);
         return employeeResponse;

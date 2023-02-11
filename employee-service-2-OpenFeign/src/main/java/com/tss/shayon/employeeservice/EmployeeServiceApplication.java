@@ -16,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(EmployeeServiceApplication.class, args);
 	}
 

@@ -88,14 +88,12 @@
     2. [Rest Template: ](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others. RestTemplate offers templates for common scenarios by HTTP method, in addition to the generalized exchange and execute methods that support less frequent cases. Rest Template is used to create applications that consume RESTful Web Services. You can use the exchange() method to consume the [web services for all HTTP methods](https://www.tutorialspoint.com/spring_boot/spring_boot_rest_template.htm). 
     3. [OpenFeign (*Recommended*)](https://spring.io/projects/spring-cloud-openfeign): This project provides OpenFeign integrations for Spring Boot apps through autoconfiguration and binding to the Spring Environment and other Spring programming model idioms.
  - Scaling application - when we will get enourmus amount of incoming requests, it will be diffucult to handle all the requests at once, as a solution to this run same server multiple times with [load balancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/), therefore, requests of clients will be distributed to different server. 
- - [Load balancing](https://www.baeldung.com/spring-cloud-load-balancer) is the process of distributing traffic among different instances of the same application.
  - In order to create load balancer we need dynamic ports. Running a service multiple time with [dynamic port](https://www.youtube.com/watch?v=a2EZxkwMrjU&t=1635s). instead of defining a fixed port, [we can let the Spring Boot application run on a random](https://www.baeldung.com/spring-boot-running-port) port by setting “0” as the value of the “server.port” property. 
  - This part of the documentation covers support for [reactive-stack web applications](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html) built on a Reactive Streams API to run on non-blocking servers, such as Netty, Undertow, and Servlet containers. 
  - [Webflux dependency](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux)
-
-
-
-
+ - [Load balancing](https://www.baeldung.com/spring-cloud-load-balancer) is the process of distributing traffic among different instances of the same application.
+    1. [Ribbon is a client-side load balancer](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html#:~:text=Ribbon%20is%20a%20client%2Dside,that%20of%20the%20named%20client.) that gives you a lot of control over the behavior of HTTP and TCP clients. Feign already uses Ribbon, so, if you use @FeignClient, this section also applies.
+    2. Client-Side Load-Balancing with [Spring Cloud LoadBalancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/) You will build a microservice application that uses Spring Cloud LoadBalancer to provide client-side load-balancing in calls to another microservice.
 
 
 

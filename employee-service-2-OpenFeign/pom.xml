@@ -9,14 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tss.shayon</groupId>
-	<artifactId>employee-service-part-2</artifactId>
+	<artifactId>employee-service-part-3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>employee-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>19</java.version>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
-		<version>2022.0.1</version>
+		<spring-cloud.version>2022.0.1</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -43,7 +43,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
 		<dependency>
@@ -62,7 +61,11 @@
 		    <artifactId>spring-cloud-starter-openfeign</artifactId>
 		    <!-- <version>4.0.1</version> -->
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-ribbon -->
+<!--		<dependency>-->
+<!--		    <groupId>org.springframework.cloud</groupId>-->
+<!--		    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+<!--		</dependency>-->
 
 	</dependencies>
 
@@ -80,7 +83,7 @@
 			<dependency>
 			    <groupId>org.springframework.cloud</groupId>
 			    <artifactId>spring-cloud-dependencies</artifactId>
-			    <version>2022.0.1</version>
+			    <version>${spring-cloud.version}</version>
 			    <type>pom</type>
 			    <scope>import</scope>
 			</dependency>
