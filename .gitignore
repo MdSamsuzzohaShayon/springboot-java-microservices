@@ -8,21 +8,18 @@ employee-service/target
 employee-service/HELP.md
 employee-service/.gitignore
 employee-service/.idea
+employee-service/.classpath
+employee-service/.project
+employee-service/.settings
 ### Address service ###
 address-service/target
 address-service/HELP.md
 address-service/.gitignore
 address-service/.idea
-### Order service ###
-order-service/target
-order-service/HELP.md
-order-service/.gitignore
-order-service/.idea
-### Inventory service ###
-inventory-service/target
-inventory-service/HELP.md
-inventory-service/.gitignore
-inventory-service/.idea
+address-service/.classpath
+address-service/.project
+address-service/.settings
+
 
 ### STS ###
 .apt_generated

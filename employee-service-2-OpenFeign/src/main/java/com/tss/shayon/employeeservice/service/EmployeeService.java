@@ -1,6 +1,7 @@
 package com.tss.shayon.employeeservice.service;
 
 import com.tss.shayon.employeeservice.entity.EmployeeEntity;
+import com.tss.shayon.employeeservice.feignclient.AddressClient;
 import com.tss.shayon.employeeservice.repo.EmployeeRepository;
 import com.tss.shayon.employeeservice.response.AddressResponse;
 import com.tss.shayon.employeeservice.response.EmployeeResponse;
@@ -21,6 +22,8 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private AddressClient addressClient;
     
     
 
@@ -34,7 +37,7 @@ public class EmployeeService {
         // Use model mapper instead
         EmployeeResponse employeeResponse = modelMapper.map(employeeEntity, EmployeeResponse.class);
                 
-        AddressResponse addressResponse = new AddressResponse(); 
+        AddressResponse addressResponse = addressClient.getAddressbyEmployeeId(id); 
         
         employeeResponse.setAddressResponse(addressResponse);
         return employeeResponse;
