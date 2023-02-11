@@ -4,7 +4,7 @@
  - [Getting help](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-help.html#getting-help)
  - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
  - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/), Create [restful api](https://spring.io/guides/gs/rest-service/) with springboot
- - Getting [Started Guides](https://spring.io/guides), [Create project with visual studio code](https://spring.io/guides/gs/guides-with-vscode/), [Using intellij idea](https://spring.io/guides/gs/intellij-idea/)
+ - Getting [Started Guides](https://spring.io/guides), [Create project with visual studio code](https://spring.io/guides/gs/guides-with-vscode/), [Using intellij idea](https://spring.io/guides/gs/intellij-idea/), [Using eclpise with spring tool suite](https://www.eclipse.org/community/eclipse_newsletter/2018/february/springboot.php)
  - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
  - Starting with [Spring Initializr](https://start.spring.io/), another way is to [clone initial project from github](https://github.com/spring-guides/getting-started-guides#reveal-maven)
  - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
@@ -95,6 +95,16 @@
     1. [Ribbon is a client-side load balancer](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html#:~:text=Ribbon%20is%20a%20client%2Dside,that%20of%20the%20named%20client.) that gives you a lot of control over the behavior of HTTP and TCP clients. Feign already uses Ribbon, so, if you use @FeignClient, this section also applies.
     2. Client-Side Load-Balancing with [Spring Cloud LoadBalancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/) You will build a microservice application that uses Spring Cloud LoadBalancer to provide client-side load-balancing in calls to another microservice.
 
+### Service Registration and Discovery
+ - [Client-side service discovery](https://www.baeldung.com/spring-cloud-netflix-eureka) allows services to find and communicate with each other without hard-coding the hostname and port. The only ‘fixed point' in such an architecture is the service registry, with which each service has to register.
+ - [Spring boot client werice discovery](https://www.youtube.com/watch?v=Mamsx7RQocU&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=5): 1) netflix eureka *(Recommended)* 2) Zookeeper 3) Consul
+ - [set up a Netflix Eureka service registry](https://spring.io/guides/gs/service-registration-and-discovery/) and then build a client that both registers itself with the registry and uses it to resolve its own host. A service registry is useful because it enables client-side load-balancing and decouples service providers from consumers without the need for DNS.
+ - [Server side service discovery](https://www.youtube.com/watch?v=Mamsx7RQocU&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=5): 1) Nginx 2) AWS ELB
+
+### Eureka
+ - [Eureka Server](https://www.tutorialspoint.com/spring_boot/spring_boot_eureka_server.htm#:~:text=Eureka%20Server%20is%20an%20application,also%20known%20as%20Discovery%20Server.) is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
+ - [Include Eureka Server](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html) To include Eureka Server in your project, use the starter with a group ID of org.springframework.cloud and an artifact ID of spring-cloud-starter-netflix-eureka-server. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.
+ - http://localhost:8080/
 
 
 

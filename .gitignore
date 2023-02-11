@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
 ### Employee service ###
 employee-service/target
 employee-service/HELP.md
@@ -11,6 +12,7 @@ employee-service/.idea
 employee-service/.classpath
 employee-service/.project
 employee-service/.settings
+
 ### Address service ###
 address-service/target
 address-service/HELP.md
@@ -19,6 +21,25 @@ address-service/.idea
 address-service/.classpath
 address-service/.project
 address-service/.settings
+
+### Open feign (Not necessary) ###
+employee-service-2-OpenFeign/target
+employee-service-2-OpenFeign/HELP.md
+employee-service-2-OpenFeign/.gitignore
+employee-service-2-OpenFeign/.idea
+employee-service-2-OpenFeign/.classpath
+employee-service-2-OpenFeign/.project
+employee-service-2-OpenFeign/.settings
+
+
+### Discovery service ###
+discovery-service/target
+discovery-service/HELP.md
+discovery-service/.gitignore
+discovery-service/.idea
+discovery-service/.classpath
+discovery-service/.project
+discovery-service/.settings
 
 
 ### STS ###
