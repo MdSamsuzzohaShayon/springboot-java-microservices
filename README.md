@@ -104,7 +104,12 @@
 ### Eureka
  - [Eureka Server](https://www.tutorialspoint.com/spring_boot/spring_boot_eureka_server.htm#:~:text=Eureka%20Server%20is%20an%20application,also%20known%20as%20Discovery%20Server.) is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
  - [Include Eureka Server](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html) To include Eureka Server in your project, use the starter with a group ID of org.springframework.cloud and an artifact ID of spring-cloud-starter-netflix-eureka-server. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.
- - http://localhost:8080/
+ - Eureka [default port](https://www.baeldung.com/spring-boot-change-port) is `8761`, 
+ - In every 30 seconds [it makes a request (sync)](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-peer-awareness) to check is there any other eureka server has any registry or not
+
+
+27m
+https://www.youtube.com/watch?v=1uNo1NrqsX4&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=6 
 
 
 
