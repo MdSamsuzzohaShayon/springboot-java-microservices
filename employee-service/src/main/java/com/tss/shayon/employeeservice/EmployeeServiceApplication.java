@@ -2,6 +2,7 @@ package com.tss.shayon.employeeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
 /*
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 		@ComponentScan: Tells Spring to look for other components, configurations, and services in the com/example package, letting it find the controllers.
 */
 @SpringBootApplication
+@EnableDiscoveryClient
 public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {

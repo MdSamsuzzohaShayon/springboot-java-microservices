@@ -2,6 +2,7 @@ package com.tss.shayon.employeeservice.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 // @Configuration annotation indicates that the class has @Bean definition methods - https://www.geeksforgeeks.org/spring-configuration-annotation-with-example/
@@ -21,12 +22,12 @@ public class EmployeeMapConfig {
         return new ModelMapper();
     }
     
-    /*
+    
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
     	return new RestTemplate();
     }
-    */
     
     @Bean
     public WebClient webClient() {
