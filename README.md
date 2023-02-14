@@ -104,10 +104,16 @@
 
 ### Eureka
  - [Eureka Server](https://www.tutorialspoint.com/spring_boot/spring_boot_eureka_server.htm#:~:text=Eureka%20Server%20is%20an%20application,also%20known%20as%20Discovery%20Server.) is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
+ - [Start a Eureka Service Registry]https://spring.io/guides/gs/service-registration-and-discovery/ - You first need a Eureka Service registry. You can use Spring Cloud’s @EnableEurekaServer to stand up a registry with which other applications can communicate. This is a regular Spring Boot application with one annotation (@EnableEurekaServer) added to enable the service registry. 
  - [Include Eureka Server](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html) To include Eureka Server in your project, use the starter with a group ID of org.springframework.cloud and an artifact ID of spring-cloud-starter-netflix-eureka-server. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.
  - Eureka [default port](https://www.baeldung.com/spring-boot-change-port) is `8761`, 
  - In every 30 seconds [it makes a request (sync)](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-peer-awareness) to check is there any other eureka server has any registry or not
  - [Make default zone](https://www.youtube.com/watch?v=1uNo1NrqsX4&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9) in discovery server, so it won't create any replica and fetch. Moreover, create default zone in other service as well
+ - [Available apps registered](https://www.youtube.com/watch?v=ZcM3e_zp6Tk&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9) in eureka __http://localhost:5000/eureka/apps__ and other [apis or eureka](https://github.com/Netflix/eureka/wiki/Eureka-REST-operations)
+ - [High Availability, Zones and Regions](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-zones-and-regions) - The Eureka server does not have a back end store, but the service instances in the registry all have to send heartbeats to keep their registrations up to date (so this can be done in memory). Clients also have an in-memory cache of Eureka registrations (so they do not have to go to the registry for every request to a service).
+ - The configuration eureka.instance.lease-renewal-interval-in-seconds indicates the interval of [heartbeats that the client sends](https://www.baeldung.com/eureka-self-preservation-renewal#:~:text=lease%2Drenewal%2Dinterval%2Din%2Dseconds%20indicates%20the%20interval,one%20heartbeat%20every%2030%20seconds.) to the server. The default value is 30 seconds which means that the client will send one heartbeat every 30 seconds.
+
+
 
 27m
 https://www.youtube.com/watch?v=1uNo1NrqsX4&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=6 
