@@ -18,6 +18,7 @@
 ### Maven
  - [Building Java Projects with Maven](https://spring.io/guides/gs/maven/)
  - [Maven Respository](https://mvnrepository.com)
+ - Before running maven project always clean, validate, and compile
  - Running project via terminal `./mvnw spring-boot:run` alternativly if maven is installed locally `mvn spring-boot:run`
 
 ### Properties
@@ -106,7 +107,7 @@
  - [Include Eureka Server](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html) To include Eureka Server in your project, use the starter with a group ID of org.springframework.cloud and an artifact ID of spring-cloud-starter-netflix-eureka-server. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.
  - Eureka [default port](https://www.baeldung.com/spring-boot-change-port) is `8761`, 
  - In every 30 seconds [it makes a request (sync)](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-peer-awareness) to check is there any other eureka server has any registry or not
-
+ - [Make default zone](https://www.youtube.com/watch?v=1uNo1NrqsX4&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9) in discovery server, so it won't create any replica and fetch. Moreover, create default zone in other service as well
 
 27m
 https://www.youtube.com/watch?v=1uNo1NrqsX4&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=6 
