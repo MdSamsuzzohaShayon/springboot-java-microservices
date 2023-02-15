@@ -1,10 +1,11 @@
 package com.tss.shayon.employeeservice.service;
 
 import com.tss.shayon.employeeservice.entity.EmployeeEntity;
-import com.tss.shayon.employeeservice.repo.EmployeeRepository;
-import com.tss.shayon.employeeservice.response.AddressResponse;
-import com.tss.shayon.employeeservice.response.EmployeeResponse;
 
+import com.tss.shayon.employeeservice.repo.EmployeeRepository;
+import com.tss.shayon.employeeservice.response.EmployeeResponse;
+import com.tss.shayon.employeeservice.response.AddressResponse;
+import com.tss.shayon.employeeservice.openfeignclients.*;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
@@ -17,6 +18,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
+
 
 @Service
 public class EmployeeService {
@@ -44,6 +46,9 @@ public class EmployeeService {
     
     @Autowired
     private LoadBalancerClient loadBalancerClient;
+    
+    @Autowired
+    private AddressClient addressClient;
     
     /*
      * Rest Template API call
@@ -102,7 +107,12 @@ public class EmployeeService {
         */
         
         // address-service is a instance registered in eureka
-        AddressResponse addressResponse = restTemplate.getForObject("http://address-service/address-app/api/address/{id}", AddressResponse.class , id);
+//        AddressResponse addressResponse = restTemplate.getForObject("http://address-service/address-app/api/address/{id}", AddressResponse.class , id);
+        
+        
+        
+        AddressResponse addressResponse = addressClient.getAddressbyEmployeeId(id).getBody(); 
+        
         
 //        AddressResponse addressResponse = webClient
 //        		.get()
