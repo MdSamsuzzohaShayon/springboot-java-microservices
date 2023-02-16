@@ -110,9 +110,9 @@ public class EmployeeService {
 //        AddressResponse addressResponse = restTemplate.getForObject("http://address-service/address-app/api/address/{id}", AddressResponse.class , id);
         
         
-        
+        // MAKE REQUEST USING OPEN FEIGN
         AddressResponse addressResponse = addressClient.getAddressbyEmployeeId(id).getBody(); 
-        
+//        System.out.println("URL >>>>>>>>> " + uri);
         
 //        AddressResponse addressResponse = webClient
 //        		.get()
