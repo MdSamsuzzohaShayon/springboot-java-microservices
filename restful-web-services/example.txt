@@ -1,0 +1,8 @@
+Validation failed for argument [0] in 
+public org.springframework.http.ResponseEntity<com.thesportsanctum.com.restfulwebservices.user.User> 
+com.thesportsanctum.com.restfulwebservices.user.UserResource.createUser(com.thesportsanctum.com.restfulwebservices.user.User): 
+[Field error in object 'user' on field 'name': rejected value []; 
+codes [Size.user.name,Size.name,Size.java.lang.String,Size]; 
+arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; 
+arguments []; default message [name],2147483647,2]; 
+default message [size must be between 2 and 2147483647]] 

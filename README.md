@@ -13,6 +13,9 @@
 
 ### basic of springboot
  - Spring Boot uses Commons Logging for all internal [logging](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html) but leaves the underlying log implementation open. 
+ - Although Spring Boot supports seamless integration with custom validators, the de-facto standard for performing [validation](https://www.baeldung.com/spring-boot-bean-validation) is Hibernate Validator.
+ - To [trigger validation](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/validation.html) of a @Controller input, simply annotate the input argument as @Valid
+ - [REST and Method-Level Security](https://www.baeldung.com/exception-handling-for-rest-with-spring)
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
