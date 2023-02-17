@@ -4,42 +4,15 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Employee service ###
-employee-service/target
-employee-service/HELP.md
-employee-service/.gitignore
-employee-service/.idea
-employee-service/.classpath
-employee-service/.project
-employee-service/.settings
+### Restful web services ###
+restful-web-services/target
+restful-web-services/HELP.md
+restful-web-services/.gitignore
+restful-web-services/.idea
+restful-web-services/.classpath
+restful-web-services/.project
+restful-web-services/.settings
 
-### Address service ###
-address-service/target
-address-service/HELP.md
-address-service/.gitignore
-address-service/.idea
-address-service/.classpath
-address-service/.project
-address-service/.settings
-
-### Open feign (Not necessary) ###
-employee-service-2-OpenFeign/target
-employee-service-2-OpenFeign/HELP.md
-employee-service-2-OpenFeign/.gitignore
-employee-service-2-OpenFeign/.idea
-employee-service-2-OpenFeign/.classpath
-employee-service-2-OpenFeign/.project
-employee-service-2-OpenFeign/.settings
-
-
-### Discovery service ###
-discovery-service/target
-discovery-service/HELP.md
-discovery-service/.gitignore
-discovery-service/.idea
-discovery-service/.classpath
-discovery-service/.project
-discovery-service/.settings
 
 
 ### STS ###

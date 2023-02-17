@@ -11,13 +11,26 @@
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
  - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
 
+### Web Services
+ - Webservice - Software system designed to support interaction over a network. 3 keys are,
+    1. Designed for machine-to-machine (or a application-to-application) interaction
+    2. Should be interoperable (Not platformdependent).
+    3. Should allow communication over a network
+
+### Springboot restAPI
+ - [REST API](https://github.com/in28minutes/spring-microservices-v2/tree/main/02.restful-web-services) step by step code
+ -
+
 ### Explanation
  - Spring is one of the most popular [Java EE frameworks](https://www.geeksforgeeks.org/spring-service-annotation-with-example/). It is an open-source lightweight framework that allows Java EE 7 developers to build simple, reliable, and scalable enterprise applications. This framework mainly focuses on providing various ways to help you manage your business objects. It made the development of Web applications much easier than compared to classic Java frameworks and application programming interfaces (APIs), such as Java database connectivity (JDBC), JavaServer Pages(JSP), and Java Servlet. This framework uses various new techniques such as Aspect-Oriented Programming (AOP), Plain Old Java Object (POJO), and dependency injection (DI), to develop enterprise applications. Now talking about Spring Annotation.
+
+
  - Spring Annotations are a form of metadata that provides data about a program. Annotations are used to provide supplemental information about a program. It does not have a direct effect on the operation of the code they annotate. It does not change the action of the compiled program. 
 
 ### Maven
  - [Building Java Projects with Maven](https://spring.io/guides/gs/maven/)
  - [Maven Respository](https://mvnrepository.com)
+ - */src/main/java* has the source code, */src/main/resources* has all the configurations, */src/test/java* for writing unit tests, *pom.xml* has all the dependencies
  - Before running maven project always clean, validate, and compile
  - Running project via terminal `./mvnw spring-boot:run` alternativly if maven is installed locally `mvn spring-boot:run`
 
@@ -43,45 +56,6 @@
  - [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations)
 
 
-### Database
- - Create database `CREATE DATABASE employee_service;`
- - Create employee table manually
-   ```
-   CREATE TABLE employee(
-        id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(45) NULL,
-        email VARCHAR(45) NULL,
-        bloodroup VARCHAR(45) NULL,
-        PRIMARY KEY(ID)
-   );
-   ```
- - Insert a record to employee
-    ```
-    INSERT INTO employee(name, email, bloodgroup) VALUES ("Kilyan Mbappe", "mbappe@gmail.com", "O+");
-    ```
- - Create address table inside same database where employee table belong and make one to many relationship with employee
-    ```
-    CREATE TABLE address(
-        id INT(11) NOT NULL AUTO_INCREMENT,
-        fk_employee_id INT(11),
-        lane1 VARCHAR(45),
-        lane2 VARCHAR(45),
-        zip VARCHAR(45),
-        state VARCHAR(45),
-        PRIMARY KEY (id),
-        FOREIGN KEY(fk_employee_id) REFERENCES employee(id) ON DELETE CASCADE ON UPDATE CASCADE
-    );
-    ```
- - Insert a record to address 
-    ```
-    INSERT INTO address(fk_employee_id, lane1, lane2, zip, state) VALUES (1, "l1", "l2", "1234", "Raj");
-    ```
-
-
-### API Endpoints
- - Get a employee `/employee-app/api/employees/1` with `curl http://localhost:8080/employee-app/api/employees/1`
- - Get address of an employee `/address-app/api/address/1` with `curl http://localhost:8081/address-app/api/address/1`
-    
 
 ### Microservice communication
  - here are several ways to communicate
