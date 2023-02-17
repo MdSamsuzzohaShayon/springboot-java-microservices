@@ -16,6 +16,8 @@
  - Although Spring Boot supports seamless integration with custom validators, the de-facto standard for performing [validation](https://www.baeldung.com/spring-boot-bean-validation) is Hibernate Validator.
  - To [trigger validation](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/validation.html) of a @Controller input, simply annotate the input argument as @Valid
  - [REST and Method-Level Security](https://www.baeldung.com/exception-handling-for-rest-with-spring)
+ - [springdoc-openapi](https://springdoc.org/) java library helps to automate the generation of API documentation using spring boot projects. springdoc-openapi works by examining an application at runtime to infer API semantics based on spring configurations, class structure and various annotations. get the docs __http://localhost:8080/swagger-ui/index.html__
+ - 
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
