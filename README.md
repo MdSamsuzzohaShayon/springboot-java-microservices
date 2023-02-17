@@ -17,7 +17,8 @@
  - To [trigger validation](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/validation.html) of a @Controller input, simply annotate the input argument as @Valid
  - [REST and Method-Level Security](https://www.baeldung.com/exception-handling-for-rest-with-spring)
  - [springdoc-openapi](https://springdoc.org/) java library helps to automate the generation of API documentation using spring boot projects. springdoc-openapi works by examining an application at runtime to infer API semantics based on spring configurations, class structure and various annotations. get the docs __http://localhost:8080/swagger-ui/index.html__
- - 
+ - [Spring Boot supports localized messages](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-internationalization.html) so that your application can cater to users of different language preferences. By default, Spring Boot looks for the presence of a messages resource bundle at the root of the classpath.
+ - add [internationalization](https://www.baeldung.com/spring-boot-internationalization) to a Spring Boot application
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
