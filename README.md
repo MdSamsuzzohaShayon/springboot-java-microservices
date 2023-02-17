@@ -11,6 +11,9 @@
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
  - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
 
+### basic of springboot
+ - Spring Boot uses Commons Logging for all internal [logging](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html) but leaves the underlying log implementation open. 
+
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
     1. Designed for machine-to-machine (or a application-to-application) interaction
