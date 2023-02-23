@@ -1,13 +1,12 @@
 package com.thesportsanctum.com.restfulwebservices.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-// For multiple fields - @JsonIgnoreProperties({"field1", "field2"})  
-@JsonIgnoreProperties("field1")
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 	private String field1;
-	@JsonIgnore
 	private String field2;
 	private String field3;
 	public SomeBean(String field1, String field2, String field3) {
