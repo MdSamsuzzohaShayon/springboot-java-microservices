@@ -21,6 +21,7 @@
  - add [internationalization](https://www.baeldung.com/spring-boot-internationalization) to a Spring Boot application
  - tackle the [versioning](https://www.baeldung.com/rest-versioning) problem - 1) URI Versioning – version the URI space using version indicators, 2)Media Type Versioning – version the Representation of the Resource
  - This project provides some APIs to ease [creating REST representations](https://spring.io/guides/gs/rest-hateoas/) that follow the [HATEOAS](https://docs.spring.io/spring-hateoas/docs/current/reference/html/) principle when working with Spring and especially Spring MVC. 
+ - Implementing [Static Filtering for RESTful Services](https://www.javatpoint.com/restful-web-services-static-filtering), Implementing [Dynamic Filtering for RESTful Services](https://www.javatpoint.com/restful-web-services-dynamic-filtering)
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
