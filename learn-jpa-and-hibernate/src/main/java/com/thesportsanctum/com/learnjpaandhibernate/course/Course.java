@@ -23,10 +23,21 @@ public class Course {
 	public String getAuthor() {
 		return author;
 	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Course [id=" + id + ", name=" + name + ", author=" + author + "]";
-	}
-	
+	}	
 	
 }
