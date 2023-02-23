@@ -22,6 +22,9 @@
  - tackle the [versioning](https://www.baeldung.com/rest-versioning) problem - 1) URI Versioning – version the URI space using version indicators, 2)Media Type Versioning – version the Representation of the Resource
  - This project provides some APIs to ease [creating REST representations](https://spring.io/guides/gs/rest-hateoas/) that follow the [HATEOAS](https://docs.spring.io/spring-hateoas/docs/current/reference/html/) principle when working with Spring and especially Spring MVC. 
  - Implementing [Static Filtering for RESTful Services](https://www.javatpoint.com/restful-web-services-static-filtering), Implementing [Dynamic Filtering for RESTful Services](https://www.javatpoint.com/restful-web-services-dynamic-filtering)
+ - [An actuator is a manufacturing term](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) that refers to a mechanical device for moving or controlling something. Actuators can generate a large amount of motion from a small change.
+ - [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) is a sub-project of Spring Boot. It adds several production grade services to your application with little effort on your part. 
+ - Actuator links __http://localhost:8080/actuator__
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
@@ -98,8 +101,7 @@
  - [Available apps registered](https://www.youtube.com/watch?v=ZcM3e_zp6Tk&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9) in eureka __http://localhost:5000/eureka/apps__ and other [apis or eureka](https://github.com/Netflix/eureka/wiki/Eureka-REST-operations)
  - [High Availability, Zones and Regions](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-zones-and-regions) - The Eureka server does not have a back end store, but the service instances in the registry all have to send heartbeats to keep their registrations up to date (so this can be done in memory). Clients also have an in-memory cache of Eureka registrations (so they do not have to go to the registry for every request to a service).
  - The configuration eureka.instance.lease-renewal-interval-in-seconds indicates the interval of [heartbeats that the client sends](https://www.baeldung.com/eureka-self-preservation-renewal#:~:text=lease%2Drenewal%2Dinterval%2Din%2Dseconds%20indicates%20the%20interval,one%20heartbeat%20every%2030%20seconds.) to the server. The default value is 30 seconds which means that the client will send one heartbeat every 30 seconds.
- - [An actuator is a manufacturing term](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) that refers to a mechanical device for moving or controlling something. Actuators can generate a large amount of motion from a small change.
- - [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) is a sub-project of Spring Boot. It adds several production grade services to your application with little effort on your part. 
+
 
 
 
