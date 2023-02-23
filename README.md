@@ -27,6 +27,10 @@
  - Actuator links __http://localhost:8080/actuator__
  - using the HAL browser, we'll explore our REST API and discover how to traverse the data contained within. __http://localhost:8080/actuator__
 
+### Jpa and hidernate
+ - H2 database has an [embedded GUI](https://www.baeldung.com/spring-boot-h2-database) console for browsing the contents of a database and running SQL queries.
+ - Spring [JdbcTemplate](https://www.javatpoint.com/spring-JdbcTemplate-tutorial) is a powerful [mechanism](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html) to connect to the database and execute SQL queries.
+
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
     1. Designed for machine-to-machine (or a application-to-application) interaction
