@@ -25,6 +25,7 @@
  - [An actuator is a manufacturing term](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) that refers to a mechanical device for moving or controlling something. Actuators can generate a large amount of motion from a small change.
  - [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) is a sub-project of Spring Boot. It adds several production grade services to your application with little effort on your part. 
  - Actuator links __http://localhost:8080/actuator__
+ - using the HAL browser, we'll explore our REST API and discover how to traverse the data contained within. __http://localhost:8080/actuator__
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
