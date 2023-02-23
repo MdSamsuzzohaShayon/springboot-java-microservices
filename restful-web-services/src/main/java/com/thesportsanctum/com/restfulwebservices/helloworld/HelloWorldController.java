@@ -19,6 +19,7 @@ public class HelloWorldController {
 		this.messageSource = messageSource;
 	}
 	
+	// curl http://localhost:8080/hello-world
 	@RequestMapping(path = "hello-world", method = RequestMethod.GET)
 	public String greatings() {
 		return "Hello WOrld";
@@ -26,20 +27,22 @@ public class HelloWorldController {
 	
 	
 	// Return JSON response
+	// curl http://localhost:8080/hello-world-bean
 	@GetMapping(path= "/hello-world-bean")
 	public HelloWorldBean helloWorldBean() {
 		return new HelloWorldBean("hello world bean");
 	}
 	
 	// Using path parameters
+	// curl http://localhost:8080/hello-world/path-variable/shayon
 	@GetMapping(path= "/hello-world/path-variable/{name}")
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
 		return new HelloWorldBean(String.format("Hello %s", name));
 	}
 	
 	
-	// curl http://localhost:8080/hello-world/internationalized -H 'Accept-Language:nl'
 	// Internationalization or i18n
+	// curl http://localhost:8080/hello-world/internationalized -H 'Accept-Language:nl'
 	@GetMapping(path= "/hello-world/internationalized")
 	public String helloWorldInternationalized() {
 		Locale locale = LocaleContextHolder.getLocale();

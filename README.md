@@ -19,6 +19,8 @@
  - [springdoc-openapi](https://springdoc.org/) java library helps to automate the generation of API documentation using spring boot projects. springdoc-openapi works by examining an application at runtime to infer API semantics based on spring configurations, class structure and various annotations. get the docs __http://localhost:8080/swagger-ui/index.html__
  - [Spring Boot supports localized messages](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-internationalization.html) so that your application can cater to users of different language preferences. By default, Spring Boot looks for the presence of a messages resource bundle at the root of the classpath.
  - add [internationalization](https://www.baeldung.com/spring-boot-internationalization) to a Spring Boot application
+ - tackle the [versioning](https://www.baeldung.com/rest-versioning) problem - 1) URI Versioning – version the URI space using version indicators, 2)Media Type Versioning – version the Representation of the Resource
+ - This project provides some APIs to ease [creating REST representations](https://spring.io/guides/gs/rest-hateoas/) that follow the [HATEOAS](https://docs.spring.io/spring-hateoas/docs/current/reference/html/) principle when working with Spring and especially Spring MVC. 
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
