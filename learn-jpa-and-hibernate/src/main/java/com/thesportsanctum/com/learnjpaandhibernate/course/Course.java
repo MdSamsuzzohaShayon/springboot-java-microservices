@@ -1,10 +1,19 @@
 package com.thesportsanctum.com.learnjpaandhibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
-	
+
+	@Id // Not necessary
 	private long id;
+	@Column(name="name") // Not necessary
 	private String name;
+	@Column(name="author") // Not necessary
 	private String author;
+	
 	public Course() {
 		
 	}

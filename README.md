@@ -30,6 +30,9 @@
 ### Jpa and hidernate
  - H2 database has an [embedded GUI](https://www.baeldung.com/spring-boot-h2-database) console for browsing the contents of a database and running SQL queries.
  - Spring [JdbcTemplate](https://www.javatpoint.com/spring-JdbcTemplate-tutorial) is a powerful [mechanism](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html) to connect to the database and execute SQL queries.
+ - [Insert](https://www.tutorialspoint.com/springjdbc/springjdbc_create_query.htm) a few records in a Table. [delete](https://www.tutorialspoint.com/springjdbc/springjdbc_delete_query.htm) one of the available records in a Table.
+ - [Customize the Base Repository](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.customize-base-repository) 
+ - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) provides repository support for the Jakarta Persistence API (JPA). [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations) 
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
@@ -73,7 +76,7 @@
 
 ### Annotations
  - [Annotations for binding requests to controllers and handler methods as well as for binding request parameters to method arguments.](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/package-summary.html)
- - [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations)
+
 
 
 
