@@ -28,6 +28,8 @@
  - Process of creating a simple web application with [resources](https://docs.spring.io/spring-security/reference/index.html) that are protected by [Spring Security](https://spring.io/guides/gs/securing-web/). Spring Security is a framework that provides authentication, authorization, and protection against common attacks. Spring security password can be found on the console
  - [Filter chain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) 1) all requests should be authenticated 2) If the request is not authenticated, a web page shown 3) CSRF on POST and PUT
  - Make a request with basic auth in order to access protected route `curl --location 'http://localhost:8080/jpa/users' --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ='`
+ - It is also possible to configure the SpringApplication by using an application.properties file. Spring Boot lets you [externalize your configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) so that you can work with the same application code in different environments. 
+ - Spring Boot uses some relaxed rules for [binding Environment](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config.typesafe-configuration-properties.relaxed-binding) properties to @ConfigurationProperties beans
 
 ### Jpa and hidernate
  - H2 database has an [embedded GUI](https://www.baeldung.com/spring-boot-h2-database) console for browsing the contents of a database and running SQL queries.
