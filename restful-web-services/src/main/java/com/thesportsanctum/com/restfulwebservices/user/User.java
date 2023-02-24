@@ -31,6 +31,14 @@ public class User {
 	@Past(message="name must bein the past")
 	private LocalDate birthdate;
 	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	// Relationship
 	@OneToMany(mappedBy = "user")
 	@JsonIgnore
