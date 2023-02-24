@@ -1,18 +1,16 @@
- # Springboot Microservices
+# Springboot Microservices
  - [Tutorial playlist](https://www.youtube.com/watch?v=9XI8lknaJzM&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=2)
  - [Documentation Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html#documentation.first-steps)
  - [Getting help](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-help.html#getting-help)
- - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
  - Building an Application with [Spring Boot](https://spring.io/guides/gs/spring-boot/), Create [restful api](https://spring.io/guides/gs/rest-service/) with springboot
  - Getting [Started Guides](https://spring.io/guides), [Create project with visual studio code](https://spring.io/guides/gs/guides-with-vscode/), [Using intellij idea](https://spring.io/guides/gs/intellij-idea/), [Using eclpise with spring tool suite](https://www.eclipse.org/community/eclipse_newsletter/2018/february/springboot.php)
- - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
- - Starting with [Spring Initializr](https://start.spring.io/), another way is to [clone initial project from github](https://github.com/spring-guides/getting-started-guides#reveal-maven)
  - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
- - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
- - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
- - [Filter chain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) 1) all requests should be authenticated 2) If the request is not authenticated, a web page shown 3) CSRF on POST and PUT
+
+
 
 ### basic of springboot
+ - Starting with [Spring Initializr](https://start.spring.io/), another way is to [clone initial project from github](https://github.com/spring-guides/getting-started-guides#reveal-maven)
+ - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html)
  - Spring Boot uses Commons Logging for all internal [logging](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html) but leaves the underlying log implementation open. 
  - Although Spring Boot supports seamless integration with custom validators, the de-facto standard for performing [validation](https://www.baeldung.com/spring-boot-bean-validation) is Hibernate Validator.
  - To [trigger validation](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/validation.html) of a @Controller input, simply annotate the input argument as @Valid
@@ -28,6 +26,7 @@
  - Actuator links __http://localhost:8080/actuator__
  - using the HAL browser, we'll explore our REST API and discover how to traverse the data contained within. __http://localhost:8080/actuator__
  - Process of creating a simple web application with [resources](https://docs.spring.io/spring-security/reference/index.html) that are protected by [Spring Security](https://spring.io/guides/gs/securing-web/). Spring Security is a framework that provides authentication, authorization, and protection against common attacks. Spring security password can be found on the console
+ - [Filter chain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) 1) all requests should be authenticated 2) If the request is not authenticated, a web page shown 3) CSRF on POST and PUT
  - Make a request with basic auth in order to access protected route `curl --location 'http://localhost:8080/jpa/users' --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ='`
 
 ### Jpa and hidernate
@@ -36,6 +35,7 @@
  - [Insert](https://www.tutorialspoint.com/springjdbc/springjdbc_create_query.htm) a few records in a Table. [delete](https://www.tutorialspoint.com/springjdbc/springjdbc_delete_query.htm) one of the available records in a Table.
  - [Customize the Base Repository](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.customize-base-repository) 
  - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) provides repository support for the Jakarta Persistence API (JPA). [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/#initial), [JPA Annotations - Hibernate Annotations](https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations) 
+ - Spring Data JPA - [Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
 
 ### Web Services
  - Webservice - Software system designed to support interaction over a network. 3 keys are,
@@ -80,7 +80,13 @@
 ### Annotations
  - [Annotations for binding requests to controllers and handler methods as well as for binding request parameters to method arguments.](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/package-summary.html)
 
+### Spring-cloud 
+ - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
+ - [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/) provides server-side and client-side support for externalized configuration in a distributed system.
 
+
+### Spring microservice
+ - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
 
 
 ### Microservice communication
@@ -112,6 +118,9 @@
  - [Available apps registered](https://www.youtube.com/watch?v=ZcM3e_zp6Tk&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9) in eureka __http://localhost:5000/eureka/apps__ and other [apis or eureka](https://github.com/Netflix/eureka/wiki/Eureka-REST-operations)
  - [High Availability, Zones and Regions](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#spring-cloud-eureka-server-zones-and-regions) - The Eureka server does not have a back end store, but the service instances in the registry all have to send heartbeats to keep their registrations up to date (so this can be done in memory). Clients also have an in-memory cache of Eureka registrations (so they do not have to go to the registry for every request to a service).
  - The configuration eureka.instance.lease-renewal-interval-in-seconds indicates the interval of [heartbeats that the client sends](https://www.baeldung.com/eureka-self-preservation-renewal#:~:text=lease%2Drenewal%2Dinterval%2Din%2Dseconds%20indicates%20the%20interval,one%20heartbeat%20every%2030%20seconds.) to the server. The default value is 30 seconds which means that the client will send one heartbeat every 30 seconds.
+
+### Depricated dependencies
+ - `spring-cloud-starter-config`
 
 
 

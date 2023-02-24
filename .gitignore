@@ -4,24 +4,17 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Restful web services ###
-restful-web-services/target
-restful-web-services/HELP.md
-restful-web-services/.gitignore
-restful-web-services/.idea
-restful-web-services/.classpath
-restful-web-services/.project
-restful-web-services/.settings
+### Limit service ###
+limits-service/target
+limits-service/HELP.md
+limits-service/.gitignore
+limits-service/.idea
+limits-service/.classpath
+limits-service/.project
+limits-service/.settings
 
 
-### JPA and Hibernate ###
-learn-jpa-and-hibernate/target
-learn-jpa-and-hibernate/HELP.md
-learn-jpa-and-hibernate/.gitignore
-learn-jpa-and-hibernate/.idea
-learn-jpa-and-hibernate/.classpath
-learn-jpa-and-hibernate/.project
-learn-jpa-and-hibernate.settings
+
 
 
 
