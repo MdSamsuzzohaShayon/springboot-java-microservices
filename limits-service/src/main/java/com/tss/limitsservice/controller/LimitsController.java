@@ -16,8 +16,8 @@ public class LimitsController {
 	@GetMapping("/limits")
 	public Limits retrivelimits() {
 //		return new Limits(1, 10);
-		System.out.println(configuration.getMin());
-		System.out.println(configuration.getMax());
+//		System.out.println(configuration.getMin());
+//		System.out.println(configuration.getMax());
 		return new Limits(configuration.getMin(), configuration.getMax());
 	}
 }

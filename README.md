@@ -84,7 +84,8 @@
 
 ### Spring-cloud 
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
- - [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/) provides server-side and client-side support for externalized configuration in a distributed system.
+ - [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/) provides server-side and client-side support for externalized configuration in a distributed system. Spring Cloud Config provides server-side and client-side support for externalized configuration in a distributed system. With the Config Server, you have a central place to manage external properties for applications across all environments. 
+ - See the detail after setting up git repository __http://localhost:8888/limits-service/default__
 
 
 ### Spring microservice
