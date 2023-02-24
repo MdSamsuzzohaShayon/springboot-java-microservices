@@ -10,6 +10,7 @@
  - [Spring Boot Tutorial](https://www.javatpoint.com/spring-boot-tutorial)
  - [Spring cloud](https://spring.io/projects/spring-cloud) [tutorial](https://www.javatpoint.com/spring-cloud)
  - [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) [tutorial](https://www.javatpoint.com/microservices)
+ - [Filter chain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) 1) all requests should be authenticated 2) If the request is not authenticated, a web page shown 3) CSRF on POST and PUT
 
 ### basic of springboot
  - Spring Boot uses Commons Logging for all internal [logging](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html) but leaves the underlying log implementation open. 
@@ -26,6 +27,8 @@
  - [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) is a sub-project of Spring Boot. It adds several production grade services to your application with little effort on your part. 
  - Actuator links __http://localhost:8080/actuator__
  - using the HAL browser, we'll explore our REST API and discover how to traverse the data contained within. __http://localhost:8080/actuator__
+ - Process of creating a simple web application with [resources](https://docs.spring.io/spring-security/reference/index.html) that are protected by [Spring Security](https://spring.io/guides/gs/securing-web/). Spring Security is a framework that provides authentication, authorization, and protection against common attacks. Spring security password can be found on the console
+ - Make a request with basic auth in order to access protected route `curl --location 'http://localhost:8080/jpa/users' --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ='`
 
 ### Jpa and hidernate
  - H2 database has an [embedded GUI](https://www.baeldung.com/spring-boot-h2-database) console for browsing the contents of a database and running SQL queries.
