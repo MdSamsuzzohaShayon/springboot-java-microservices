@@ -15,6 +15,27 @@ limits-service/.settings
 
 
 
+### Spring Cloud Config Server ###
+spring-cloud-config-server/target
+spring-cloud-config-server/HELP.md
+spring-cloud-config-server/.gitignore
+spring-cloud-config-server/.idea
+spring-cloud-config-server/.classpath
+spring-cloud-config-server/.project
+spring-cloud-config-server/.settings
+
+
+### Currency Exchange Service ###
+currency-exchange-service/target
+currency-exchange-service/HELP.md
+currency-exchange-service/.gitignore
+currency-exchange-service/.idea
+currency-exchange-service/.classpath
+currency-exchange-service/.project
+currency-exchange-service/.settings
+
+
+
 
 
 
