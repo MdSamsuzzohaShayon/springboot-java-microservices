@@ -26,8 +26,8 @@ import java.util.UUID;
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private final WebClient webClient; // Variable name must be same as the method name from /config/WebClientConfig
-    private final String inventory_api = "http://localhost:8082/api/inventory";
+    private final WebClient.Builder webClientBuilder; // Variable name must be same as the method name from /config/WebClientConfig
+    private final String inventory_api = "http://inventory-service/api/inventory";
 
     public void placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
@@ -44,7 +44,7 @@ public class OrderService {
                 .toList();
 
         // CALL TO INVENTORY SERVICE, AND PLACE ORDER IF THE PRODUCT IS IN STOCK
-        InventoryResponse[] inventoryResponses = webClient.get()
+        InventoryResponse[] inventoryResponses = webClientBuilder.build().get()
                 .uri(inventory_api, uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build() )
                 .retrieve()
                 .bodyToMono(InventoryResponse[].class) // By default it will make async request
