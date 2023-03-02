@@ -35,6 +35,17 @@ currency-exchange-service/.project
 currency-exchange-service/.settings
 
 
+### Naming Server ###
+naming-server/target
+naming-server/HELP.md
+naming-server/.gitignore
+naming-server/.idea
+naming-server/.classpath
+naming-server/.project
+naming-server/.settings
+
+
+.idea
 
 
 
