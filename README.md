@@ -45,4 +45,9 @@
 
 ### Discovery service
  - Eureka  service __http://localhost:8761/__
+
+### Spring Cloud
+ - This project provides a library for building an API Gateway on top of Spring WebFlux. [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway) aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.
+ - [Configuring Route Predicate](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#configuring-route-predicate-factories-and-gateway-filter-factories) Factories and Gateway Filter Factories
  - 
+
