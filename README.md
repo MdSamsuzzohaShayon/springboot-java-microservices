@@ -50,5 +50,6 @@
  - This project provides a library for building an API Gateway on top of Spring WebFlux. [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway) aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.
  - [Configuring Route Predicate](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#configuring-route-predicate-factories-and-gateway-filter-factories) Factories and Gateway Filter Factories
  - Keycloak provides user federation, strong authentication, user management, fine-grained authorization, and [more.](https://www.keycloak.org/guides)
- - Install keycloak via docker `docker run -p 8181:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:21.0.1 start-dev`
+ - Install keycloak via docker `docker run -p 8181:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:21.0.1 start-dev` and pursue the [instruction](https://www.keycloak.org/getting-started/getting-started-docker)
+ - 
 
